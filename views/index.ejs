@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <h1 class="text-center text-primary"><%= title %></h1>
+    <h4 class="alert alert-success text-center">Login Form </h4>
+        <form action="/" method="POST">
+          <% if(msg !=''){%>
+            <p class="badge badge-danger offset-md-4"><%=msg %></p> 
+          <%}%>
+            <div class="row">
+              <div class="col-md-4 offset-md-4">
+                  <label class="badge badge-pill badge-primary">UserName</label>
+                <input type="text" class="form-control"name="uname" placeholder="UserName">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4 offset-md-4">
+                  <label class="badge badge-pill badge-primary">Password</label>
+                <input type="Password" class="form-control"name="password" placeholder="Password">
+              </div>
+            </div>
+
+          
+
+            <div class="col-md-4 offset-md-4 mt-4">
+                <label></label>
+                <button type="submit" class="btn btn-outline-primary">Login</button>
+            </div>
+            <div class="col-md-4 offset-md-4 mt-4">
+              <label class="text-capitalize font-weight-bold">if you dont have account</label>
+              <a href="/signup" class="badge badge-warning">Create Account</a>
+          </div>
+          </form>
+  </body>
+</html>
